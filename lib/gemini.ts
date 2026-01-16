@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { Product, TransactionRecord } from "../types/schema";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const MODEL_FAST = 'gemini-2.5-flash';
 

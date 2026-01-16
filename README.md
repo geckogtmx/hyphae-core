@@ -54,7 +54,7 @@ Core publishes immutable `MenuRelease` snapshots that the [Hyphae POS](https://g
 | **State** | Zustand 5 (planned) |
 | **Database** | Drizzle ORM + SQLite/LibSQL (planned) |
 | **AI** | Google Gemini 2.5 Flash |
-| **Validation** | Zod |
+| **Validation** | Zod (planned) |
 
 ---
 
@@ -62,6 +62,8 @@ Core publishes immutable `MenuRelease` snapshots that the [Hyphae POS](https://g
 
 ```
 hyphae-core/
+├── .agent/
+│   └── skills/           # AI development assistance
 ├── types/
 │   └── schema.ts          # Canonical data structures (POS contract)
 ├── lib/
@@ -80,7 +82,7 @@ hyphae-core/
 
 ### Prerequisites
 - Node.js 18+
-- npm or pnpm
+- pnpm (recommended)
 
 ### Installation
 
@@ -92,7 +94,7 @@ hyphae-core/
 
 2. **Install dependencies**:
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Configure environment** (optional for AI features):
@@ -103,10 +105,18 @@ hyphae-core/
 
 4. **Run the development server**:
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 5. **Open in browser**: `http://localhost:5173`
+
+### Available Scripts
+
+```bash
+pnpm dev      # Start development server (Vite)
+pnpm build    # Build for production
+pnpm preview  # Preview production build
+```
 
 ---
 
@@ -118,6 +128,8 @@ hyphae-core/
 |---------|--------|
 | **Core Schema** | ✅ Complete |
 | **Proto-Dashboard** | ✅ Complete |
+| **Governance Docs** | ✅ Complete |
+| **POS Integration Docs** | ✅ Complete |
 | **Drizzle/SQLite** | 🟡 Planned |
 | **Zustand Stores** | 🟡 Planned |
 | **Menu Export** | ❌ Not Started |
